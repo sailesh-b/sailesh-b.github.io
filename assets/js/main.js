@@ -261,4 +261,13 @@
     })
   });
 
+  // spotlight
+  const spotlight = document.querySelector('.spotlight');
+
+document.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e;
+    spotlight.style.transform = `translate(${clientX - 100}px, ${clientY - 100}px)`;
+});
+
+
 })()
