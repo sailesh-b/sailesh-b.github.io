@@ -12,6 +12,8 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
   background-color: black;
+  cursor: none;
+
 }
 
 a {
@@ -29,6 +31,14 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+a,
+button,
+input,
+textarea,
+select,
+label {
+  cursor: none !important;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -109,17 +119,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.spotlight {
+/* Custom cursor glowing ring */
+.cursor-ring {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0563bb;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
   pointer-events: none;
-  mix-blend-mode: overlay;
-  transition: transform 0.2s ease-out;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #0563bb, 0 0 20px #0563bb;
+  transition: transform 0.15s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+  mix-blend-mode: difference;
 }
 
 
@@ -477,6 +489,10 @@ section {
   margin-bottom: 0;
 }
 
+.image-profile img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
 
 /*--------------------------------------------------------------
 # Skills
@@ -486,6 +502,10 @@ section {
   display: block;
   background: none;
   border-radius: 0;
+}
+
+.progress-bar {
+  transform-origin: left center;
 }
 
 .skills .progress .skill {
@@ -741,6 +761,26 @@ a{
   bottom: 15px;
   right: 15px;
 }
+
+.portfolio-wrap {
+  perspective: 1000px;
+}
+
+.portfolio-wrap:hover .portfolio-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+
+.portfolio-info {
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease;
+}
+
+.portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details

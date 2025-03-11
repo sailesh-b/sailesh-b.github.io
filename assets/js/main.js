@@ -270,4 +270,133 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
+
+// About Section Animation
+gsap.from(".about .section-title, .image-profile, .content", {
+  scrollTrigger: { trigger: ".about", start: "top 80%" },
+  opacity: 0, y: 50, stagger: 0.2, duration: 1, ease: "power3.out"
+});
+
+// Skills Animation
+gsap.from(".skills .progress", {
+  scrollTrigger: { trigger: ".skills", start: "top 80%" },
+  opacity: 0, x: -50, stagger: 0.15, duration: 1, ease: "power4.out"
+});
+
+// Resume Animation
+gsap.from(".resume .resume-item", {
+  scrollTrigger: { trigger: ".resume", start: "top 80%" },
+  opacity: 0, y: 30, stagger: 0.2, duration: 0.8, ease: "power2.out"
+});
+
+// Portfolio Items
+gsap.from(".portfolio-item", {
+  scrollTrigger: { trigger: ".portfolio", start: "top 80%" },
+  opacity: 0, scale: 0.9, y: 30, stagger: 0.2, duration: 0.8, ease: "power2.out"
+});
+
+// Contact Animation
+gsap.from(".contact .info, .contact .php-email-form", {
+  scrollTrigger: { trigger: ".contact", start: "top 80%" },
+  opacity: 0, x: -100, stagger: 0.3, duration: 1, ease: "power3.out"
+});
+
+// Back-to-top Button
+gsap.to(".back-to-top", {
+  scrollTrigger: { trigger: "body", start: "top -100%" },
+  opacity: 1, scale: 1, duration: 0.8, ease: "elastic.out(1, 0.5)"
+});
+
+// Footer Animation
+gsap.from("#footer h3, #footer p, #footer", {
+  scrollTrigger: { trigger: "#footer", start: "top 90%" },
+  opacity: 0, y: 30, stagger: 0.2, duration: 0.8, ease: "power3.out"
+});
+
+
+document.querySelectorAll('.progress').forEach(progress => {
+  const progressBar = progress.querySelector('.progress-bar');
+  const skillText = progress.querySelector('.skill');
+
+  // Hover Effect (Mouse enter)
+  progress.addEventListener('mouseenter', () => {
+    gsap.to(progressBar, {
+      backgroundColor: "#c9a30a",
+      scaleX: 1.02,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+
+    gsap.to(skillText, {
+      color: "#c9a30a",
+      duration: 0.1,
+      ease: "power2.out"
+    });
+  });
+
+  // Mouse leave - revert to normal
+  progress.addEventListener('mouseleave', () => {
+    gsap.to(progressBar, {
+      backgroundColor: "#0563bb",
+      scaleX: 1,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+
+    gsap.to(skillText, {
+      color: "#45505b",
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  });
+
+  // Click animation (bounce effect)
+  progress.addEventListener('click', () => {
+    gsap.fromTo(progressBar, 
+      { scaleX: 0.8 }, 
+      { scaleX: 1, duration: 0.6, ease: "elastic.out(1, 0.4)" }
+    );
+
+    gsap.fromTo(skillText, 
+      { y: -10, opacity: 0.7 }, 
+      { y: 0, opacity: 1, duration: 0.6, ease: "elastic.out(1, 0.5)" }
+    );
+  });
+});
+
+// Custom Glowing Cursor Effect
+const cursorRing = document.querySelector('.cursor-ring');
+
+window.addEventListener('mousemove', (e) => {
+  gsap.to(cursorRing, {
+    duration: 0.2,
+    x: e.clientX,
+    y: e.clientY,
+    ease: "power2.out"
+  });
+});
+
+// Optional: Cursor Click Animation
+window.addEventListener('mousedown', () => {
+  gsap.to(cursorRing, {
+    scale: 1.5,
+    borderColor: "#ffffff",
+    boxShadow: "0 0 15px #ffffff, 0 0 30px #ffffff",
+    duration: 0.2,
+    ease: "power2.out"
+  });
+});
+
+window.addEventListener('mouseup', () => {
+  gsap.to(cursorRing, {
+    scale: 1,
+    borderColor: "#0563bb",
+    boxShadow: "0 0 10px #0563bb, 0 0 20px #0563bb",
+    duration: 0.2,
+    ease: "power2.out"
+  });
+});
+
+
+
 })()
