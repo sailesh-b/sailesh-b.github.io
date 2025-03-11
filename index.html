@@ -544,7 +544,10 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0 bgxcolor">
 
-            <form action="forms/index.php" method="post" role="form" class="php-email-form bgxcolor">
+            <form
+              action="https://formspree.io/f/xpwpzlek"
+              method="POST"
+              class="php-email-form bgxcolor">
               <div class="row bgxcolor">
                 <div class="col-md-6 form-group bgxcolor">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -559,12 +562,7 @@
               <div class="form-group mt-3 bgxcolor">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3 bgxcolor bgxcolor">
-                <div class="loading bgxcolor">Loading</div>
-                <div class="error-message bgxcolor"></div>
-                <div class="sent-message bgxcolor bgxcolor">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center bgxcolor"><button type="submit">Send Message</button></div>
+              <button type="submit">Send Message</button>
             </form>
 
           </div>
