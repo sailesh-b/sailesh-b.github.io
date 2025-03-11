@@ -28,6 +28,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -38,7 +39,16 @@
 
 <body>
   <div class="cursor-ring"></div>
-
+  <div id="custom-preloader">
+    <div class="loader-ring"></div>
+  </div>
+  <div class="animated-bg">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+  
+  
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -65,7 +75,10 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h4> &#128075; Hello, this is </h4>
-      <h1>Sailesh</h1>
+      <h1>
+        <span>S</span><span>a</span><span>i</span><span>l</span><span>e</span><span>s</span><span>h</span>
+      </h1>
+      
       <p>&amp; I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Traveller "></span></p>
       <div class="social-links">
         <a href="https://x.com/sailesh67876"target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -108,7 +121,6 @@
             <div class="row">
               <div class="col-lg-6 txtcolor">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Feb 2002</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+37128685639</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Current City</strong> <span>Lisbon, Portugal</span></li>
                 </ul>
@@ -117,7 +129,6 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sailesh67876@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>M.S. Information Technology</span></li>
                 </ul>
               </div>
             </div>
@@ -216,7 +227,7 @@
             </div>
 
             <div class="progress">
-              <span class="skill">BUG BOUNTY <i class="val">45%</i></span>
+              <span class="skill">WEB SECURITY <i class="val">45%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -245,23 +256,18 @@
           </div>
         <div class="row">
           <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Sailesh B</h4>
-              <div class="txtcolor">
-                <p><em>Innovative and deadline-driven UI/UX Designer Looking for an entry-level position in designing and web developing .</em></p>
-                <ul>
-                  <li>Townhall, Coimbatore, Tamilnadu - 641001</li>
-                  <li>(+91) 9566993153</li>
-                  <li>sailesh67876@gmail.com</li>
-                </ul>
-              </div>
-            </div>
-
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Masters of Computer Systems</h4>
-              <h5>2022 - Present</h5>
+              <h4>ERASMUS+ EXCHANGE</h4>
+              <h5>2024 - 2025</h5>
+              <div class="txtcolor">
+               <p><em>IADE - Lisbon</em></p>
+               <p> Got a chance for a 6 months exchange study programme in Lisbon, Portugal. I was studying in the field of Artificial Intelligence and Creatice Computing. I was able to learn from the best professors and students across different nations. </p>
+              </div>
+            </div>
+            <div class="resume-item">
+              <h4>Masters in Information Technology</h4>
+              <h5>2023 - Present</h5>
               <div class="txtcolor">
                <p><em>Latvian University of Life Science and technology</em></p>
                <p> I'm pursuing this course and trying to explore more sectors and sharpen my career towards computer science.</p>
@@ -285,28 +291,46 @@
             </div>
           </div>
           <div class="col-lg-6">
+            <h3 class="resume-title">Research</h3>
+            <div class="resume-item">
+              <h4>Quantum Neural Networks (QNNs) and Variational Circuits</h4>
+              <h5>2025</h5>
+              <div class="txtcolor">
+                <p><em>Sailesh Babu</em></p>
+                <p>Examine how variational quantum circuits are used to train QNNs, including backpropagation techniques in the quantum setting.</p>
+              </div> 
+            </div>
+            <div class="resume-item">
+              <h4>Deep Learning Architectures for Live Video Captioning Systems for visually impaired people</h4>
+              <h5>2024</h5>
+              <div class="txtcolor">
+                <p><em>Sailesh Babu &amp; Dr. sc. ing. Vitalijs Komasilovs</em></p>
+                <p>A Comparitive study analysis for using different deep learning architectures for live video captioning systems for visually impaired people.</p>
+              </div> 
+            </div>
             <h3 class="resume-title">Projects</h3>
             <div class="resume-item">
-              <h4>NAKSHATHRA CREATIONS</h4>
-              <h5>2021</h5>
+              <h4>RELIV</h4>
+              <h5>2024 - 2025</h5>
               <div class="txtcolor">
                 <p><em>TEAM COLLABORATION</em></p>
                 <ul>
-                  <li>Created a E-commerce website with a professional and minimalistic design for a photography studio. </li>
-                  <li>Lead in the design,Frontend development, and implementation of the layout.</li>
-                  <li><strong>TECHNOLOGIES :</strong> Python[Django], HTML, CSS, Bootstrap, MySql</li>
+                  <li>Created an interactive emotional diary using AI & AR to detect and relive positive
+                    memories, used by 50+ beta testers. </li>
+                  <li>Integrated heart rate analysis (HR & HRV) to predict mood with an 85% accuracy rate.</li>
+                  <li><strong>TECHNOLOGIES :</strong> TensorFlow, Unity, Arduino, Python, C#</li>
                 </ul>
               </div> 
             </div>
             <div class="resume-item">
-              <h4>VOICE ASSISTANT</h4>
-              <h5>2020 - 2021</h5>
+              <h4>Weather Forecasting System</h4>
+              <h5>2023 - 2024</h5>
               <div class="txtcolor">
                 <p><em>SOLO CREATION</em></p>
                 <ul>
-                  <li>An alpha version of the voice assistant, that does some simple operations like responding, opening programs like system apps, google, and some other applications, telling jokes, finding lyrics, sending mails, dictionaries, converters.</li>
-                  <li>It has an Ocr function that helps to extract text from images.</li>
-                  <li>It has an IoT feature for turning on and off all electrical appliances such as lights, fans, AC, etc. by voice control (based on hardware and software).</li>
+                  <li>Building a Bayesian Network based weather prediction system  </li>
+                  <li>Generating CPDs according to historical data, cpds are generated with probabilities.</li>
+                  <li>Training & Testing with 1 million dataset and achieved 93.64% accuracy rate.</li>
                 </ul>
               </div>
             </div>
@@ -331,9 +355,9 @@
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-web">Web-Dev</li>
               <li data-filter=".filter-app">app</li>
-              <li data-filter=".filter-card">Designs</li>
+              <li data-filter=".filter-card">Creations</li>
             </ul>
           </div>
         </div>
@@ -342,10 +366,23 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>RELIV - AI</h4>
+                <p>AR - Mobile Application</p>
+                <p>Captures and displays the user's best and more precious moments using AR and Heartrate</p>
+                <div class="portfolio-links">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
               <img src="assets/img/portfolio/voice-user-interface-design.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Voice Assistant</h4>
-                <p>App</p>
+                <p>Custom made LLM - Voice Assistant</p>
+                <p>Acts as an local processing AI agent that can be used to perform various tasks</p>
                 <div class="portfolio-links">
                 </div>
               </div>
@@ -354,7 +391,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web-1.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/portfolio-7.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Nakshathra Creations</h4>
                 <p>Web</p>
@@ -365,18 +402,20 @@
             </div>
           </div>
 
-          
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/portfolio-5.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Nakshathra E-commerce</h4>
-                <p>E-commerce UI design</p>
+                <h4>Furniture Fusion</h4>
+                <p>UX friendly, Aesthetic design E-commerce store that can be used for display and buy furnitures for their customers.</p>
+                <div class="portfolio-links">
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
 
+        
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-8.png" class="img-fluid" alt="">
@@ -389,10 +428,19 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/ml.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Fashion Freak Store</h4>
-                <p>Watch store  UI des</p>
+                <h4>Job Recommender system</h4>
+                <p>Developed a Job Recommender system using Machine Learning and Natural Language Processing</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/weather.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Weather Forecasting system</h4>
+                <p>Developed a weather forecasting system using Bayesian Networks and Machine Learning</p>
               </div>
             </div>
           </div>
@@ -546,7 +594,6 @@
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

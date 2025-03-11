@@ -138,6 +138,20 @@
   /**
    * Hero type effect
    */
+
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#hero", {
+  scrollTrigger: {
+    trigger: "#hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  },
+  backgroundPosition: "50% 100%",
+  ease: "none"
+});
+
   const typed = select('.typed')
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
@@ -150,6 +164,53 @@
       backDelay: 2000
     });
   }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+// Hero letters fade-out and move up individually on scroll
+gsap.to("#hero h1 span", {
+  opacity: 0,
+  y: -40,
+  stagger: 0.1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#hero",
+    start: "top top",
+    end: "bottom center",
+    scrub: true
+  }
+});
+
+// transisionn animation
+gsap.to(".shape1", {
+  x: 300,
+  y: 100,
+  duration: 10,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
+gsap.to(".shape2", {
+  x: -300,
+  y: -200,
+  duration: 15,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
+gsap.to(".shape3", {
+  x: 150,
+  y: -150,
+  duration: 15,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+
+  
+
 
   /**
    * Skills animation
@@ -260,7 +321,17 @@
       mirror: false
     })
   });
-
+  window.addEventListener('load', () => {
+    gsap.to("#custom-preloader", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      onComplete: () => {
+        document.getElementById("custom-preloader").style.display = "none";
+      }
+    });
+  });
+  
   // spotlight
   const spotlight = document.querySelector('.spotlight');
 
@@ -369,7 +440,7 @@ const cursorRing = document.querySelector('.cursor-ring');
 
 window.addEventListener('mousemove', (e) => {
   gsap.to(cursorRing, {
-    duration: 0.2,
+    duration: 0,
     x: e.clientX,
     y: e.clientY,
     ease: "power2.out"
